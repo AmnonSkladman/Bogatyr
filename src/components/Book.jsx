@@ -18,7 +18,7 @@ const Book = ({
   return (
     <Grid item xs={12} md={6} lg={3}>
       <div>
-        <h2>{title}</h2>
+        <h2 className="bookTitle">{title}</h2>
         <img alt={`${title} written by ${author}`} src={cover} />
         <p>{publishedDate}</p>
       </div>
