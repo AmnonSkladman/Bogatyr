@@ -1,15 +1,45 @@
+/* IMPORT */
 @import url('https://fonts.googleapis.com/css?family=Alegreya|Lato');
 
+/* BASE */
 * {
   box-sizing: border-box;
 }
 
-.App {
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 'Lato', sans-serif;
   font-size: 10px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
   text-align: center;
 }
 
+input {
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+}
+
+input[type="text"] {
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 5px;
+  width: 80px;
+}
+
+input[type="submit"]:hover {
+  background-color: #282c34;
+  color: antiquewhite;
+}
+
+/* CLASS */
 .App-header {
   align-items: center;
   background-color: #9D7D6F;
@@ -42,27 +72,13 @@
   color: #DD545C;
 }
 
-input[type="submit"] {
-  padding: 5px;
-  background-color: transparent;
-  color: black;
-  border: 1px solid black;
-  width: 80px;
-  margin-left: 5px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #282c34;
-  color: antiquewhite;
-}
-
 .search {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
+  position: relative;
 }
 
 .search > input[type="text"]{
