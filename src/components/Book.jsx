@@ -1,16 +1,13 @@
 import React from 'react';
 
-const DEFAULT_PLACEHOLDER_IMAGE =
-  'https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg';
-
-const Book = ({ book: { volumeInfo: { imageLinks, publishedDate, title } } }) => {
-  const poster = !imageLinks ? DEFAULT_PLACEHOLDER_IMAGE : imageLinks.smallThumbnail;
+const Book = ({ book: { id, volumeInfo: { imageLinks, publishedDate, title } } }) => {
+  const cover = 'http://books.google.com/books/content?id=' + id + '&printsec=frontcover&img=1&zoom=1&source=gbs_api';
 
   return (
     <div className="book">
       <h2>{title}</h2>
       <div>
-        <img width="200" alt={`The book titled: ${title}`} src={poster} />
+        <img width="200" alt={`The book titled: ${title}`} src={cover} />
       </div>
       <p>({publishedDate})</p>
     </div>
