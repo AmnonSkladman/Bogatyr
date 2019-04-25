@@ -13,16 +13,6 @@ const Book = ({
     id +
     '&printsec=frontcover&img=1&zoom=1&source=gbs_api';
 
-  // return (
-  //   <div className="book">
-  //     <h2>{title}</h2>
-  //     <div>
-  //       <img width="200" alt={`The book titled: ${title}`} src={cover} />
-  //     </div>
-  //     <p>({publishedDate})</p>
-  //   </div>
-  // );
-
   const author = authors.length > 1 ? `${authors[0]} and more` : authors[0];
 
   return (
