@@ -2,33 +2,33 @@ import React, { useState } from 'react';
 
 const Search = ({ search }) => {
   // [state, setState] React Hook
-  const [searchValue, setSearchValue] = useState('');
+  const [query, setQuery] = useState('');
 
-  // populates the search value
-  const handleSearchInputChanges = e => {
-    setSearchValue(e.target.value);
+  // populates the query
+  const handleChangeQuery = e => {
+    setQuery(e.target.value);
   };
 
   // resets the input
   const resetInputField = () => {
-    setSearchValue('');
+    setQuery('');
   };
 
   // searches using the value and resets the field
-  const callSearchFunction = e => {
+  const searchBooks = e => {
     e.preventDefault();
-    search(searchValue);
+    search(query);
     resetInputField();
   };
 
   return (
     <form className="search">
       <input
-        value={searchValue}
-        onChange={handleSearchInputChanges}
+        value={query}
+        onChange={handleChangeQuery}
         type="text"
       />
-      <input onClick={callSearchFunction} type="submit" value="SEARCH" />
+      <input onClick={searchBooks} type="submit" value="SEARCH" />
     </form>
   );
 };
