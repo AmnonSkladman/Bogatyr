@@ -98,7 +98,6 @@ const App = ({ classes }) => {
     <div className="App">
       <Header text="Bogatyr" />
       <Search search={search} />
-      <p className="App-intro">A digital knight-errant for books</p>
       <Grid
         alignItems="flex-start"
         className={classes.root}

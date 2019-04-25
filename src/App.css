@@ -48,13 +48,13 @@ input[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   font-family: 'Alegreya', serif;
-  font-size: calc(10px + 2vw);
-  height: 100px;
+  height: 120px;
   justify-content: center;
   padding: 10px;
 }
 
-.App-header h2 {
+.App-header > h2 {
+  font-size: calc(10px + 2.5vw);
   margin: 0px;
 }
 
