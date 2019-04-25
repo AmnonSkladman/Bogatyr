@@ -92,7 +92,7 @@ const App = ({ classes }) => {
       <Search search={search} />
       <p className="App-intro">A digital knight-errant for books</p>
       <Grid
-        alignItems="center"
+        alignItems="flex-start"
         className={classes.root}
         container
         direction="row"
@@ -100,7 +100,7 @@ const App = ({ classes }) => {
         spacing={16}
       >
         {loading && !errorMessage ? (
-          <span>loading... </span>
+          <span>Loading... </span>
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : (
