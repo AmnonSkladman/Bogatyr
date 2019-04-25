@@ -60,14 +60,12 @@ const App = ({ classes }) => {
       });
   }, []);
 
-  const search = searchValue => {
+  const search = q => {
     dispatch({
       type: 'SEARCH_BOOKS_REQUEST'
     });
 
-    fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${searchValue}&apikey=4a3b711b`
-    )
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${q}&apikey=4a3b711b`)
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === 'True') {
