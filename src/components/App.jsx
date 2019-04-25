@@ -7,31 +7,25 @@ import Search from './Search';
 const BOOK_API_URL = "https://www.googleapis.com/books/v1/volumes?q=''";
 
 const initialState = {
-  // ? loading state
   loading: true,
-  // * list of fetched books
   books: [],
-  // ! errors from api
   errorMessage: null
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    // ? Requests and loads books
     case 'SEARCH_BOOKS_REQUEST':
       return {
         ...state,
         loading: true,
         errorMessage: null
       };
-    // * Updates the books array
     case 'SEARCH_BOOKS_SUCCESS':
       return {
         ...state,
         loading: false,
         books: action.payload
       };
-    // ! Updates the error object
     case 'SEARCH_BOOKS_FAILURE':
       return {
         ...state,
