@@ -19,38 +19,12 @@
   cursor: pointer;
 }
 
-.spinner {
-  height: 100px;
-  margin: auto;
-}
-
 .App-intro {
   font-size: large;
 }
 
-.books {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
 .App-header h2 {
   margin: 0;
-}
-
-.add-books {
-  text-align: center;
-}
-
-.add-books button {
-  font-size: 16px;
-  padding: 8px;
-  margin: 0 10px 30px 10px;
-}
-
-.book {
-  padding: 5px 25px 10px 25px;
-  max-width: 25%;
 }
 
 .errorMessage {
@@ -85,23 +59,4 @@ input[type="submit"]:hover {
 .search > input[type="text"]{
   width: 40%;
   min-width: 170px;
-}
-
-@media screen and (min-width: 694px) and (max-width: 915px) {
-  .book {
-    max-width: 33%;
-  }
-}
-
-@media screen and (min-width: 652px) and (max-width: 693px) {
-  .book {
-    max-width: 50%;
-  }
-}
-
-@media screen and (max-width: 651px) {
-  .book {
-    max-width: 100%;
-    margin: auto;
-  }
 }

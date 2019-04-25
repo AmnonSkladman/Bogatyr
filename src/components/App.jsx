@@ -1,37 +1,33 @@
 import React, { useReducer, useEffect } from 'react';
+import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
 import '../App.css';
-import Header from './Header';
 import Book from './Book';
+import { BOOK_API_URL } from '../utils/api';
+import Header from './Header';
 import Search from './Search';
-
-const BOOK_API_URL = "https://www.googleapis.com/books/v1/volumes?q=''";
+import { styles } from '../utils/styles';
 
 const initialState = {
-  // ? loading state
   loading: true,
-  // * list of fetched books
   books: [],
-  // ! errors from api
   errorMessage: null
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    // ? Requests and loads books
     case 'SEARCH_BOOKS_REQUEST':
       return {
         ...state,
         loading: true,
         errorMessage: null
       };
-    // * Updates the books array
     case 'SEARCH_BOOKS_SUCCESS':
       return {
         ...state,
         loading: false,
         books: action.payload
       };
-    // ! Updates the error object
     case 'SEARCH_BOOKS_FAILURE':
       return {
         ...state,
@@ -43,7 +39,7 @@ const reducer = (state, action) => {
   }
 };
 
-const App = () => {
+const App = ({ classes }) => {
   // * Takes the initial state, then creates a new one based on the
   // * action type and payload in the reduer's logic.
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -64,14 +60,12 @@ const App = () => {
       });
   }, []);
 
-  const search = searchValue => {
+  const search = q => {
     dispatch({
       type: 'SEARCH_BOOKS_REQUEST'
     });
 
-    fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${searchValue}&apikey=4a3b711b`
-    )
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${q}&apikey=4a3b711b`)
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === 'True') {
@@ -97,7 +91,14 @@ const App = () => {
       <Header text="Bogatyr" />
       <Search search={search} />
       <p className="App-intro">A digital knight-errant for books</p>
-      <div className="books">
+      <Grid
+        alignItems="center"
+        className={classes.root}
+        container
+        direction="row"
+        justify="center"
+        spacing={16}
+      >
         {loading && !errorMessage ? (
           <span>loading... </span>
         ) : errorMessage ? (
@@ -107,9 +108,9 @@ const App = () => {
             <Book key={`${index}-${book.volumeInfo.title}`} book={book} />
           ))
         )}
-      </div>
+      </Grid>
     </div>
   );
 };
 
-export default App;
+export default withStyles(styles)(App);

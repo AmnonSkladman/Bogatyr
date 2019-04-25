@@ -1,19 +1,28 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
 
-const DEFAULT_PLACEHOLDER_IMAGE =
-  'https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg';
+const Book = ({
+  book: {
+    id,
+    volumeInfo: { authors, imageLinks, publishedDate, title }
+  },
+  classes
+}) => {
+  const cover =
+    'http://books.google.com/books/content?id=' +
+    id +
+    '&printsec=frontcover&img=1&zoom=1&source=gbs_api';
 
-const Book = ({ book: { volumeInfo: { imageLinks, publishedDate, title } } }) => {
-  const poster = !imageLinks ? DEFAULT_PLACEHOLDER_IMAGE : imageLinks.smallThumbnail;
+  const author = authors.length > 1 ? `${authors[0]} and more` : authors[0];
 
   return (
-    <div className="book">
-      <h2>{title}</h2>
+    <Grid item xs={12} md={6} lg={3}>
       <div>
-        <img width="200" alt={`The book titled: ${title}`} src={poster} />
+        <h2>{title}</h2>
+        <img alt={`${title} written by ${author}`} src={cover} />
+        <p>{publishedDate}</p>
       </div>
-      <p>({publishedDate})</p>
-    </div>
+    </Grid>
   );
 };
 
