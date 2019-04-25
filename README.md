@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About Bogatyr
+Bogatyrs have been known to be knight-errants in Slavic mythology. They would go on quests, slaying beasts and capture prized creatures for their king. Although my app isn't quite capable of defeating dragons or capturing firebirds, it works in a somewhat similar manner, though for books. It uses Google's Books API to look for and fetch books based on your query. You'll be able to view any information available on it. It's essentially like a Google Search, but I do plan on trying to implement pricing and availability at some point, too, and customizing it to my liking. It would be a neat web app for book lovers, new and old.
+
+I'm not quite sure of what other plans I have for this yet, but I am always open to discuss new features if anyone has any requests or ideas. This is also a way for me to work on my ReactJS skills and experiment with hooks and the like. I'm always open to connect with other developers and potentially explore new opportunities.
+
 ## Available Scripts
 ### `npm start`
 Runs the app in the development mode.<br>
@@ -14,9 +19,12 @@ Builds the app for production to the `build` folder.<br>
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**<br>
+
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.<br>
+
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.<br>
+
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
