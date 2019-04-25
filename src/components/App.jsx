@@ -65,18 +65,26 @@ const App = ({ classes }) => {
       type: 'SEARCH_BOOKS_REQUEST'
     });
 
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${q}&apikey=4a3b711b`)
-      .then(response => response.json())
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${q}`)
+      .then(response =>
+        response
+          .json()
+          .then(data => ({
+            body: data,
+            error: response.error,
+            status: response.status
+          }))
+      )
       .then(jsonResponse => {
-        if (jsonResponse.Response === 'True') {
+        if (jsonResponse.status === 200) {
           dispatch({
             type: 'SEARCH_BOOKS_SUCCESS',
-            payload: jsonResponse.Search
+            payload: jsonResponse.body
           });
         } else {
           dispatch({
             type: 'SEARCH_BOOKS_FAILURE',
-            error: jsonResponse.Error
+            error: jsonResponse.error
           });
         }
       });
@@ -92,7 +100,7 @@ const App = ({ classes }) => {
       <Search search={search} />
       <p className="App-intro">A digital knight-errant for books</p>
       <Grid
-        alignItems="center"
+        alignItems="flex-start"
         className={classes.root}
         container
         direction="row"
@@ -100,7 +108,7 @@ const App = ({ classes }) => {
         spacing={16}
       >
         {loading && !errorMessage ? (
-          <span>loading... </span>
+          <span>Loading... </span>
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : (

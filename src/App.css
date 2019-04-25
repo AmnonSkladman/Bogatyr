@@ -1,44 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Lato');
+
 * {
   box-sizing: border-box;
 }
 
 .App {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
   text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  height: 70px;
+  align-items: center;
+  background-color: #9D7D6F;
+  color: antiquewhite;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: 'Alegreya', serif;
+  font-size: calc(10px + 2vw);
+  height: 100px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 20px;
-  cursor: pointer;
+  padding: 10px;
+}
+
+.App-header h2 {
+  margin: 0px;
 }
 
 .App-intro {
   font-size: large;
 }
 
-.App-header h2 {
-  margin: 0;
+.bookTitle {
+  text-overflow: ellipsis;
 }
 
 .errorMessage {
   margin: auto;
   font-weight: bold;
-  color: rgb(161, 15, 15);
-}
-
-.search {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
+  color: #DD545C;
 }
 
 input[type="submit"] {
@@ -54,6 +55,14 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #282c34;
   color: antiquewhite;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .search > input[type="text"]{
