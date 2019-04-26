@@ -7,14 +7,14 @@ const Search = ({ search }) => {
     setQuery(e.target.value);
   };
 
-  const resetInputField = () => {
+  const resetQuery = () => {
     setQuery('');
   };
 
   const searchBooks = e => {
     e.preventDefault();
     search(query);
-    resetInputField();
+    resetQuery();
   };
 
   return (
