@@ -1,7 +1,6 @@
 import React, { useReducer, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
-import '../App.css';
 import Book from './Book';
 import { BOOK_API_URL } from '../utils/api';
 import Header from './Header';
