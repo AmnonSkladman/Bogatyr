@@ -63,6 +63,9 @@ input[type='submit']:hover {
 }
 
 .bookTitle {
+  margin: 10px auto;
+  max-width: 15vw;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
