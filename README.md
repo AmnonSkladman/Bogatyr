@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Live demo available [here](https://amnonskladman.github.io/Bogatyr/).
+
 ## About Bogatyr
 Bogatyrs have been known to be knight-errants in Slavic mythology. They would go on quests, slaying beasts and capture prized creatures for their king. Although my app isn't quite capable of defeating dragons or capturing firebirds, it works in a somewhat similar manner, though for books. It uses Google's Books API to look for and fetch books based on your query. You'll be able to view any information available on it. It's essentially like a Google Search, but I do plan on trying to implement pricing and availability at some point, too, and customizing it to my liking. It would be a neat web app for book lovers, new and old.
 
