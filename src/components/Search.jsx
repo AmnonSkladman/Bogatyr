@@ -1,34 +1,38 @@
 import React, { useState } from 'react';
 
 const Search = ({ search }) => {
-  // [state, setState] React Hook
   const [query, setQuery] = useState('');
 
-  // populates the query
   const handleChangeQuery = e => {
     setQuery(e.target.value);
   };
 
-  // resets the input
-  const resetInputField = () => {
+  const resetQuery = () => {
     setQuery('');
   };
 
-  // searches using the value and resets the field
   const searchBooks = e => {
     e.preventDefault();
     search(query);
-    resetInputField();
+    resetQuery();
   };
 
   return (
     <form className="search">
       <input
-        value={query}
+        aria-labelledby='Search for books here'
+        className="search-field"
         onChange={handleChangeQuery}
-        type="text"
+        placeholder="Search for books..."
+        required
+        type="search"
+        value={query}
       />
-      <input onClick={searchBooks} type="submit" value="SEARCH" />
+      <button aria-label='Search' className="button-search" onClick={searchBooks} type="submit">
+        <span aria-label="Magnifying glass emoji" role="img">
+          🔍
+        </span>
+      </button>
     </form>
   );
 };

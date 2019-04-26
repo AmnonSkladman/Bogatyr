@@ -1,0 +1,129 @@
+/* IMPORT */
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Lato');
+
+/* BASE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
+
+input {
+  color: black;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+input[type='text'] {
+  font-size: 1rem;
+}
+
+input[type='submit'] {
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 5px;
+  width: 80px;
+}
+
+input[type='submit']:hover {
+  background-color: #282c34;
+  color: antiquewhite;
+}
+
+/* CLASS */
+.App-header {
+  align-items: center;
+  background-color: #9d7d6f;
+  color: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Alegreya', serif;
+  height: 120px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.App-header > h2 {
+  font-size: calc(10px + 2.5vw);
+  margin: 0px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.bookTitle {
+  margin: 10px auto;
+  max-width: 15vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.errorMessage {
+  margin: auto;
+  font-weight: bold;
+  color: #dd545c;
+}
+
+.search {
+  background: #fff;
+  border-radius: 28px;
+  display: flex;
+  padding: 1px;
+  max-width: 50vw;
+  margin: 1rem auto;
+}
+
+.search button[type='submit'] {
+  background-color: #9d7d6f;  
+  border: 0;
+  border-bottom-right-radius: 27px;
+  border-top-right-radius: 27px;
+  cursor: pointer;
+  padding: 0 22px 0 18px;
+  position: relative;
+}
+
+.search button[type='submit']:before {
+  border-color: transparent transparent #9d7d6f;
+  border-style: solid;
+  border-width: 0 0 44px 44px;
+  content: '';
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  width: 0;
+}
+
+.search input[type='search'] {
+  -webkit-appearance: unset;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  background: antiquewhite;
+  border: 1px solid #9d7d6f;
+  border-bottom-left-radius: 27px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 27px;
+  border-top-right-radius: 0;
+  color: #9d7d6f;
+  flex: 1;
+  min-width: 0;
+  padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+}
+
+.search input[type='search']::placeholder {
+  color: #9d7d6f;
+}
