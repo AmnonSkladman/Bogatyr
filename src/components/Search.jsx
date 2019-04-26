@@ -19,8 +19,20 @@ const Search = ({ search }) => {
 
   return (
     <form className="search">
-      <input value={query} onChange={handleChangeQuery} type="text" />
-      <input onClick={searchBooks} type="submit" value="SEARCH" />
+      <input
+        aria-labelledby='Search for books here'
+        className="search-field"
+        onChange={handleChangeQuery}
+        placeholder="Search for books..."
+        required
+        type="search"
+        value={query}
+      />
+      <button aria-label='Search' className="button-search" onClick={searchBooks} type="submit">
+        <span aria-label="Magnifying glass emoji" role="img">
+          🔍
+        </span>
+      </button>
     </form>
   );
 };
