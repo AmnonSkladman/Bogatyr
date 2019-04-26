@@ -20,7 +20,7 @@ const Book = ({
     : 'None';
 
   return (
-    <Grid item xs={12} md={6} lg={3}>
+    <Grid item xs={12} md={6} lg={3} xl={2}>
       <div>
         <h2 className="bookTitle">{title}</h2>
         <img alt={`${title} written by ${author}`} src={cover} />
