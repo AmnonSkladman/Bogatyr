@@ -39,15 +39,8 @@ const reducer = (state, action) => {
 };
 
 const App = ({ classes }) => {
-  // * Takes the initial state, then creates a new one based on the
-  // * action type and payload in the reduer's logic.
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // * useEffect gets called after the first render (componentDidMount) and
-  // * after every update (componentDidUpdate). It takes in a function to
-  // * execute, and a value to check for updates. We have nothing to update,
-  // * so we pass an empty array. This effect will therefore run only once.
-  // * This will return a JSON of the books we get from the API.
   useEffect(() => {
     fetch(BOOK_API_URL)
       .then(response => response.json())
