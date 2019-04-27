@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Bogatyr/static/css/main.ddd3b99b.chunk.css",
+    "main.js": "/Bogatyr/static/js/main.347fe92f.chunk.js",
+    "main.js.map": "/Bogatyr/static/js/main.347fe92f.chunk.js.map",
+    "runtime~main.js": "/Bogatyr/static/js/runtime~main.7e8295d3.js",
+    "runtime~main.js.map": "/Bogatyr/static/js/runtime~main.7e8295d3.js.map",
+    "static/js/2.2bff1922.chunk.js": "/Bogatyr/static/js/2.2bff1922.chunk.js",
+    "static/js/2.2bff1922.chunk.js.map": "/Bogatyr/static/js/2.2bff1922.chunk.js.map",
+    "index.html": "/Bogatyr/index.html",
+    "precache-manifest.b9c6077b19f2e68f099b260618e9e559.js": "/Bogatyr/precache-manifest.b9c6077b19f2e68f099b260618e9e559.js",
+    "service-worker.js": "/Bogatyr/service-worker.js",
+    "static/css/main.ddd3b99b.chunk.css.map": "/Bogatyr/static/css/main.ddd3b99b.chunk.css.map"
+  }
+}
