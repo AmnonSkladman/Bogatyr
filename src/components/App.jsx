@@ -82,7 +82,7 @@ const App = ({ classes }) => {
       });
   };
 
-  const { books, errorMessage, loading } = state;
+  const { books: { items = []}, errorMessage, loading } = state;
 
   console.log(state);
 
@@ -103,7 +103,7 @@ const App = ({ classes }) => {
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : (
-          books.items.map((book, index) => (
+          items.map((book, index) => (
             <Book key={`${index}-${book.volumeInfo.title}`} book={book} />
           ))
         )}
