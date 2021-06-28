@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1ae3622ae2ea5b3eab14183dbb98a45",
+    "revision": "de09f6fa5a418a422f51d0c617743ec0",
     "url": "/Bogatyr/index.html"
   },
   {
-    "revision": "5d01e0f299741d98afc5",
+    "revision": "86da9068e87f978e90c0",
     "url": "/Bogatyr/static/css/main.ddd3b99b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Bogatyr/static/js/2.2bff1922.chunk.js"
   },
   {
-    "revision": "5d01e0f299741d98afc5",
-    "url": "/Bogatyr/static/js/main.347fe92f.chunk.js"
+    "revision": "86da9068e87f978e90c0",
+    "url": "/Bogatyr/static/js/main.7dad7206.chunk.js"
   },
   {
     "revision": "e8c8b69a3909db219dfd",
